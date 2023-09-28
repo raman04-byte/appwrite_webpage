@@ -1,3 +1,4 @@
+import 'package:appwrite_web/common_widgets/button.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants/assets.dart';
@@ -19,80 +20,71 @@ class _NavbarContainerState extends State<NavbarContainer> {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-          height: Dimensions.scaleH(100),
-          color: const Color(0xFF171d37),
-          child: Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: Dimensions.scaleW(12),
-              vertical: Dimensions.scaleH(20),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
+      height: Dimensions.scaleH(100),
+      color: const Color(0xFF171d37),
+      child: Padding(
+        padding: EdgeInsets.symmetric(
+          horizontal: Dimensions.scaleW(12),
+          vertical: Dimensions.scaleH(20),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
               children: [
-                Row(
-                  children: [
-                    const AppWriteImage(
-                      imagePath: Assets.image1,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: Dimensions.scaleW(7)),
-                      child: const Row(
-                        children: [
-                          MouseEvent(text: "Docs"),
-                          MouseEvent(text: "Community"),
-                          MouseEvent(text: "Pricing"),
-                          GitHubLogo()
-                        ],
-                      ),
-                    ),
-                  ],
+                const AppWriteImage(
+                  imagePath: Assets.image1,
                 ),
-                Row(
-                  children: [
-                    const ToogleSwitch(),
-                    MouseRegion(
-                      cursor: SystemMouseCursors.click,
-                      child: Padding(
-                        padding: EdgeInsets.only(
-                          left: Dimensions.scaleW(10),
-                          right: Dimensions.scaleH(10),
-                        ),
-                        child: Text(
-                          "Sign In",
-                          style: TextStyle(
-                              color: const Color(0xFFc4d8eb),
-                              fontSize: Dimensions.scaleH(15)),
-                        ),
-                      ),
-                    ),
-                    MouseRegion(
-                      cursor: SystemMouseCursors.click,
-                      child: Padding(
-                        padding: EdgeInsets.only(
-                          right: Dimensions.scaleW(15),
-                        ),
-                        child: Container(
-                          height: Dimensions.scaleH(50),
-                          width: Dimensions.scaleW(23),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(50),
-                              color: const Color(0xFFc7d8eb)),
-                          alignment: Alignment.center,
-                          child: Text(
-                            "Sign Up",
-                            style: TextStyle(
-                                color: const Color(0xFF171d37),
-                                fontSize: Dimensions.scaleH(15)),
-                          ),
-                        ),
-                      ),
-                    )
-                  ],
-                )
+                Padding(
+                  padding: EdgeInsets.only(left: Dimensions.scaleW(7)),
+                  child: const Row(
+                    children: [
+                      MouseEvent(text: "Docs"),
+                      MouseEvent(text: "Community"),
+                      MouseEvent(text: "Pricing"),
+                      GitHubLogo()
+                    ],
+                  ),
+                ),
               ],
             ),
-          ),
+            Row(
+              children: [
+                const ToogleSwitch(),
+                MouseRegion(
+                  cursor: SystemMouseCursors.click,
+                  child: Padding(
+                    padding: EdgeInsets.only(
+                      left: Dimensions.scaleW(10),
+                      right: Dimensions.scaleH(10),
+                    ),
+                    child: Text(
+                      "Sign In",
+                      style: TextStyle(
+                          color: const Color(0xFFc4d8eb),
+                          fontSize: Dimensions.scaleH(15)),
+                    ),
+                  ),
+                ),
+                MouseRegion(
+                  cursor: SystemMouseCursors.click,
+                  child: Padding(
+                    padding: EdgeInsets.only(
+                      right: Dimensions.scaleW(15),
+                    ),
+                    child: CommonButton(
+                      text: "Sign Up",
+                      height: Dimensions.scaleH(50),
+                      width: Dimensions.scaleW(23),
+                    ),
+                  ),
+                )
+              ],
+            )
+          ],
+        ),
+      ),
     );
   }
 }

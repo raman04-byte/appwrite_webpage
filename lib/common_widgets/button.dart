@@ -16,8 +16,6 @@ class _CommonButtonState extends State<CommonButton> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // height: Dimensions.scaleH(50),
-      // width: Dimensions.scaleW(23),
       height: widget.height,
       width: widget.width,
       decoration: BoxDecoration(

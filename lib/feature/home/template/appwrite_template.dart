@@ -42,12 +42,15 @@ class _AppwriteTemplateState extends State<AppwriteTemplate> {
           ),
           Padding(
             padding: EdgeInsets.only(top: Dimensions.scaleH(15)),
-            child: Text(
-              "Build Fast. Scale Big. All in One Place.",
-              style: TextStyle(
-                color: AppColor.fontColor,
-                fontWeight: FontWeight.bold,
-                fontSize: Dimensions.scaleH(40),
+            child: MouseRegion(
+              cursor: SystemMouseCursors.text,
+              child: Text(
+                "Build Fast. Scale Big. All in One Place.",
+                style: TextStyle(
+                  color: AppColor.fontColor,
+                  fontWeight: FontWeight.bold,
+                  fontSize: Dimensions.scaleH(40),
+                ),
               ),
             ),
           ),
@@ -56,12 +59,15 @@ class _AppwriteTemplateState extends State<AppwriteTemplate> {
                 top: Dimensions.scaleH(15),
                 left: Dimensions.scaleW(_fontPadding),
                 right: Dimensions.scaleW(_fontPadding)),
-            child: Text(
-              "Appwrite is a backend platform for developing Web, Mobile, and Flutter applications. Built with the open source community and optimized for developer experience in the coding languages you love.",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: AppColor.fontColor,
-                fontSize: Dimensions.scaleH(15),
+            child: MouseRegion(
+              cursor: SystemMouseCursors.text,
+              child: Text(
+                "Appwrite is a backend platform for developing Web, Mobile, and Flutter applications. Built with the open source community and optimized for developer experience in the coding languages you love.",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: AppColor.fontColor,
+                  fontSize: Dimensions.scaleH(15),
+                ),
               ),
             ),
           ),
